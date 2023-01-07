@@ -10,8 +10,8 @@ export default function Home() {
 
   const handleAuth = (event) => {
     event.preventDefault()
-    const username = 'darmajr94'
-    const password = 'hahaha123'
+    const username = process.env.username
+    const password = process.env.password
     if (event.target[0].value === username && event.target[1].value === password) {
       sessionStorage.setItem('isAuth', true)
       redirectToBeranda()
